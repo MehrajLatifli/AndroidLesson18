@@ -88,7 +88,7 @@ class HomeFragment : Fragment() {
 
     private fun setUpRecyclerView() {
 
-        lifecycleScope.launch(Dispatchers.Main) {
+
             val gridLayoutManager = GridLayoutManager(context, 2)
             binding.recycleViewHome.layoutManager = gridLayoutManager
             binding.recycleViewHome.adapter = productAdapter
@@ -98,7 +98,7 @@ class HomeFragment : Fragment() {
                     HomeFragmentDirections.actionHomeFragmentToDetailFragment(productId.toString())
                 findNavController().navigate(action)
             }
-        }
+
     }
 
     private fun observeData() {
@@ -128,17 +128,17 @@ class HomeFragment : Fragment() {
 
     private fun hideOtherWidgets() {
 
-        lifecycleScope.launch(Dispatchers.Main) {
+
             binding.headerContainerLayout.gone()
             binding.recycleViewHome.gone()
-        }
+
     }
 
     private fun showOtherWidgets() {
-        lifecycleScope.launch(Dispatchers.Main) {
+
             binding.headerContainerLayout.visible()
             binding.recycleViewHome.visible()
-        }
+
     }
 
     private fun openFilePicker() {

@@ -47,7 +47,7 @@ class OnboardingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        lifecycleScope.launch(Dispatchers.Main) {
+
 
 
             onboardAdapter.updateList(onboardList)
@@ -90,7 +90,7 @@ class OnboardingFragment : Fragment() {
                 }
             })
 
-        }
+
     }
 
     override fun onDestroyView() {
